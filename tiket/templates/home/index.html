@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="nopol/"><button type="button" class="btn btn-danger">NO POL</button></a>
+    <a href="noblok/"><button type="button" class="btn btn-danger">NO BLOK</button></a>
+    <a href="/"><button type="button" class="btn btn-danger">H  O  M  E</button></a>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">No Pol</th>
+            <th scope="col">No Blok</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{data.nopol}}</td>
+            <td>{{data1.nopblok}}</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>
