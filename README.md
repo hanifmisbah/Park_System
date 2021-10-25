@@ -3,10 +3,10 @@ Sistem parkir by Python-Django Sistem parkir
 
 	      User_Frontiler			 Head_User
 
-	  Mulai
-	    |
-	    |
-	    |
+	  	Mulai
+	    	|
+	    	|
+	    	|
       Laporan login user----------------Laporan login user
           fronliner                       fronliner
             |
