@@ -5,7 +5,7 @@ from . import models, forms
 def index(req):
     home1 = models.Park.objects.all()
     home2 = models.Harga.objects.all()
-    return render(req, 'home/index.html', {
+    return render(req, 'home/index1.html', {
         'data1' : home1,
         'data2' : home2,
     })

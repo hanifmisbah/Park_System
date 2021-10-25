@@ -1,8 +1,12 @@
 # Park_SystemPark_System
 Sistem parkir by Python-Django Sistem parkir
 
-	      User_Frontiler			     Head_User
+	      User_Frontiler			 Head_User
 
+	      Mulai
+	    	|
+	    	|
+	    	|
       Laporan login user----------------Laporan login user
           fronliner                       fronliner
             |
