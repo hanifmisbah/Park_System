@@ -4,7 +4,7 @@ from . import models, forms
 # Create your views here.
 def index(req):
     home1 = models.Park.objects.all()
-    return render(req, 'home/index.html', {
+    return render(req, 'home/index1.html', {
         'data1' : home1,
     })
 
