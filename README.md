@@ -3,7 +3,7 @@ Sistem parkir by Python-Django Sistem parkir
 
 	      User_Frontiler			 Head_User
 
-	  	Mulai
+	      Mulai
 	    	|
 	    	|
 	    	|
