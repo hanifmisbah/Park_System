@@ -11,6 +11,7 @@
   <div class="row mt-5">
     <div class="col-md-6 offset-md-3">
       <a href="nopol/"><button type="button" class="btn btn-danger">NO POL</button></a>
+      <a href="harga/"><button type="button" class="btn btn-danger">INPUT HARGA</button></a>
       <a href="/"><button type="button" class="btn btn-danger">H  O  M  E</button></a>
     
     <table class="table">
@@ -20,6 +21,7 @@
             <th scope="col">No Pol</th>
             <th scope="col">No Blok</th>
             <th scope="col">Waktu</th>
+            <th scope="col">Harga</th>
             <th scope="col">#</th>
           </tr>
         </thead>
@@ -30,6 +32,7 @@
             <td>{{d.nopol}}</td>
             <td>{{d.noblok}}</td>
             <td>{{d.dtg}}</td>
+            <td>{{d.harga}}</td>
             <td>
               <a href="{{d.id}}/hapus"><button type="button" class="btn btn-danger m-2">Hapus</button></a>
             </td>
