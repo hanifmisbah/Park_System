@@ -16,10 +16,10 @@ class Park(models.Model):
         ( 'B2', 'B2'),
         ( 'B3', 'B3'),
     ]
-    noblok=models.CharField(max_length=3, choices=NOBLOK, default='', null=True, blank=True)
+    noblok=models.CharField(max_length=3, choices=NOBLOK, default='' )
     dtg=models.TimeField(default=datetime.now)
     # klr=models.DateTimeField(auto_now=True, null=True, blank=True)
-    harga=models.ForeignKey(Harga, on_delete=models.CASCADE, related_name='biaya')
+    # harga=models.ForeignKey(Harga, on_delete=models.CASCADE, related_name='biaya')
 
     def __repr__(self):
         return self.harga
