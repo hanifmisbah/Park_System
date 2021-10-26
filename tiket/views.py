@@ -24,7 +24,7 @@ def input_harga(req):
         'data' : data,
         'form' : form,
     })
-
+# form input
 def input_nopol(req):
     form = forms.Park()
     if req.POST:
