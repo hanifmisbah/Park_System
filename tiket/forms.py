@@ -4,9 +4,9 @@ from . import models
 class Park(ModelForm):
     class Meta:
         model=models.Park
-        exclude=['harga','dtg']
+        exclude=['dtg']
 
-class Harga(ModelForm):
-    class Meta:
-        model=models.Harga
-        exclude=[]
+# class Harga(ModelForm):
+#     class Meta:
+#         model=models.Harga
+#         exclude=[]
