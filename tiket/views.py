@@ -10,6 +10,25 @@ def index(req):
         # 'data2' : home2,
     })
 
+def input_nopol(req):
+    form = forms.Park()
+    if req.POST:
+        form = forms.Park(req.POST)
+        if form.is_valid():
+            form.dtg
+            form.save()
+        return redirect('/')
+
+    data = models.Park.objects.all()
+    return render(req, 'tiket/index.html', {
+        'data' : data,
+        'form' : form,
+    })
+
+def delete(req, id):
+    models.Park.objects.filter(pk=id).delete()
+    return redirect('/')
+
 # def input_harga(req):
 #     form = forms.Harga()
 #     if req.POST:
@@ -24,22 +43,3 @@ def index(req):
 #         'data' : data,
 #         'form' : form,
 #     })
-
-def input_nopol(req):
-    form = forms.Park()
-    if req.POST:
-        form = forms.Park(req.POST)
-        if form.is_valid():
-            form.instance.owner = req.user
-            form.save()
-        return redirect('/')
-
-    data = models.Park.objects.all()
-    return render(req, 'tiket/index.html', {
-        'data' : data,
-        'form' : form,
-    })
-
-def delete(req, id):
-    models.Park.objects.filter(pk=id).delete()
-    return redirect('/')

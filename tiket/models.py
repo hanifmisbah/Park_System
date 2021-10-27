@@ -28,9 +28,9 @@ class Park(models.Model):
     #     if self.dtg + timedelta(hours=0, minutes=0, seconds=20):
     #         return self.harga + 500
 
-    def biaya(self):
-        x = self.dtg
-        y = self.dtg+time()
+    # def biaya(self):
+    #     x = self.dtg
+    #     y = datetime.time(00,00,5)
         
-        waktu = y - x
-        print (waktu)
+    #     waktu = datetime.timedelta(hours=(y.hour - x.hour), minutes=(y.minute - x.minute), seconds=(y.second - x.second))
+    #     print (waktu)
