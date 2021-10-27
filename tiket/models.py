@@ -1,6 +1,6 @@
 from django.db import models
-from datetime import datetime
-
+from datetime import date, datetime, time, timezone
+import time
 from django.db.models.fields import TimeField
 # from time import time
 
@@ -19,13 +19,18 @@ class Park(models.Model):
         ( 'B3', 'B3'),
     ]
     noblok=models.CharField(max_length=3, choices=NOBLOK, default='' )
-    dtg=models.TimeField(default=datetime.now)
+    dtg=models.TimeField(auto_now=True)
     # klr=models.DateTimeField(auto_now=True, null=True, blank=True)
     harga=models.PositiveBigIntegerField(blank=False, null=False)
     # harga=models.ForeignKey(Harga, default='', blank=True, on_delete=models.CASCADE, related_name='biaya')
 
+    # def biaya(self):
+    #     if self.dtg + timedelta(hours=0, minutes=0, seconds=20):
+    #         return self.harga + 500
+
     def biaya(self):
-        if self.dtg <= self.dtg:
-            return self.harga
-        # elif self.dtg + 
-        #     return self.harga+500
+        x = self.dtg
+        y = self.dtg+time()
+        
+        waktu = y - x
+        print (waktu)
