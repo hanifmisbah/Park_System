@@ -2,11 +2,7 @@ from django.db import models
 from datetime import date, datetime, time, timezone
 import time
 from django.db.models.fields import TimeField
-# from time import time
 
-# Create your models here.
-# class Harga(models.Model):
-#     harga=models.IntegerField(blank=False)
 
 class Park(models.Model):
     nopol=models.CharField(default='', max_length=10)
@@ -20,17 +16,9 @@ class Park(models.Model):
     ]
     noblok=models.CharField(max_length=3, choices=NOBLOK, default='' )
     dtg=models.TimeField(auto_now=True)
-    # klr=models.DateTimeField(auto_now=True, null=True, blank=True)
+    klr=models.TimeField(auto_now=True)
     harga=models.PositiveBigIntegerField(blank=False, null=False)
-    # harga=models.ForeignKey(Harga, default='', blank=True, on_delete=models.CASCADE, related_name='biaya')
 
-    # def biaya(self):
-    #     if self.dtg + timedelta(hours=0, minutes=0, seconds=20):
+    # def waktu(self):
+    #     if self.dtg + datetime.time(0,0,5,0):
     #         return self.harga + 500
-
-    # def biaya(self):
-    #     x = self.dtg
-    #     y = datetime.time(00,00,5)
-        
-    #     waktu = datetime.timedelta(hours=(y.hour - x.hour), minutes=(y.minute - x.minute), seconds=(y.second - x.second))
-    #     print (waktu)
