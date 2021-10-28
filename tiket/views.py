@@ -5,7 +5,7 @@ from . import models, forms
 def index(req):
     home1 = models.Park.objects.all()
     # home2 = models.Harga.objects.all()
-    return render(req, 'home/index1.html', {
+    return render(req, 'home/dashboard.html', {
         'data1' : home1,
         # 'data2' : home2,
     })
@@ -28,6 +28,9 @@ def input_nopol(req):
 def delete(req, id):
     models.Park.objects.filter(pk=id).delete()
     return redirect('/')
+
+def login(req):
+    return render(req, 'login/login.html')
 
 # def input_harga(req):
 #     form = forms.Harga()
