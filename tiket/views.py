@@ -5,6 +5,7 @@ from . import models, forms
 # Create your views here.
 def index(req):
     home1 = models.Park.objects.all()
+<<<<<<< HEAD
     print(home1)
     time = 2
     for d in home1:
@@ -19,6 +20,11 @@ def index(req):
     return render(req, 'home/index1.html', {
         'data' : home1,
         # 'time' : time,
+=======
+    # home2 = models.Harga.objects.all()
+    return render(req, 'home/dashboard.html', {
+        'data1' : home1,
+>>>>>>> f66376f5b6786460f61444a66ac74203c05cf4de
         # 'data2' : home2,
     })
 
@@ -39,6 +45,9 @@ def input_nopol(req):
 def delete(req, id):
     models.Park.objects.filter(pk=id).delete()
     return redirect('/')
+
+def login(req):
+    return render(req, 'login/login.html')
 
 # def input_harga(req):
 #     form = forms.Harga()
