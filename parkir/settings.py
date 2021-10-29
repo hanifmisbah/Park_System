@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-CRISPY_TEMPLATES_PACK = 'bootstrap4'
+CRISPY_TEMPLATES_PACK = 'bootstrap4', 'bootstrap5'
 WSGI_APPLICATION = 'parkir.wsgi.application'
 
 
