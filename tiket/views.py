@@ -3,30 +3,25 @@ from django.shortcuts import redirect, render
 
 from . import models, forms
 # Create your views here.
+
 def index(req):
     home1 = models.Park.objects.all()
-<<<<<<< HEAD
-    print(home1)
-    time = 2
-    for d in home1:
-        # d.dtg
-        # print(d.dtg)
-        time+=1
-        print(time)
+    return render(req, 'home/dashboard.html', {
+        'data1' : home1,
+    })
+    # for d in home1:
+    #     print(d[8])
+    # print(home1)
+    #     datawaktu = models.Park.objects.all()
+    # def waktu(req):
+    #         time = d
+    #         print(time)
+    
+    # print(waktu)
 
     # if time + datetime.time(0,0,5,0):
     #     return home1.harga + 500
-    print(time)
-    return render(req, 'home/index1.html', {
-        'data' : home1,
-        # 'time' : time,
-=======
     # home2 = models.Harga.objects.all()
-    return render(req, 'home/dashboard.html', {
-        'data1' : home1,
->>>>>>> f66376f5b6786460f61444a66ac74203c05cf4de
-        # 'data2' : home2,
-    })
 
 def input_nopol(req):
     form = forms.Park()
@@ -37,7 +32,7 @@ def input_nopol(req):
         return redirect('/')
 
     data = models.Park.objects.all()
-    return render(req, 'tiket/index.html', {
+    return render(req, 'tiket/input.html', {
         'data' : data,
         'form' : form,
     })
@@ -48,18 +43,3 @@ def delete(req, id):
 
 def login(req):
     return render(req, 'login/login.html')
-
-# def input_harga(req):
-#     form = forms.Harga()
-#     if req.POST:
-#         form = forms.Harga(req.POST)
-#         if form.is_valid():
-#             form.instance.owner = req.user
-#             form.save()
-#         return redirect('/')
-
-#     data = models.Harga.objects.all()
-#     return render(req, 'harga/index.html', {
-#         'data' : data,
-#         'form' : form,
-#     })

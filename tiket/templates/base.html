@@ -9,7 +9,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <script>
         document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -290,9 +290,9 @@
             <div> <a href="#" class="nav_logo"><i class='bx bx-layer nav_logo-icon'></i>
                     <span class="nav_logo-name">P A R K S Y S T E M</span> </a>
                 <div class="nav_list">
-                    <a href="#" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span
+                    <a href="/" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span
                             class="nav_name">Dashboard</span></a>
-                    <a href="login/" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span
+                    <a href="/" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span
                             class="nav_name">Users</span> </a>
                     <a href="nopol/" class="nav_link"> <i class='bx bx-tachometer nav_icon'></i> <span
                             class="nav_name">Vehicle</span> </a>
@@ -301,42 +301,11 @@
                     class="nav_name">SignOut</span> </a>
         </nav>
     </div>
-    <!--Container Main start-->
     <div class=" bg-light">
         <h4>Park System</h4>
     </div>
-
-
-    <!--Container Main end-->
-
-    <div class="tb">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">No Pol</th>
-                    <th scope="col">No Blok</th>
-                    <th scope="col">Waktu</th>
-                    <th scope="col">Harga</th>
-                    <th scope="col">action</th>
-                </tr>
-            </thead>
-            <!-- {% for d in data1 %} -->
-            <tbody>
-                <tr>
-                    <th scope="row">{{forloop.counter}}</th>
-                    <td>{{d.nopol}}</td>
-                    <td>{{d.noblok}}</td>
-                    <td>{{d.dtg}}</td>
-                    <td>{{d.harga}}</td>
-                    <td>
-                        <a href="{{d.id}}/hapus"><button type="button" class="btn btn-danger m-2">Hapus</button></a>
-                    </td>
-                </tr>
-            </tbody>
-            <!-- {% endfor %} -->
-        </table>
-    </div>
+    {% block content %}
+    {% endblock %}
 </body>
 
 </html>

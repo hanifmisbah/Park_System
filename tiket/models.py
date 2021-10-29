@@ -1,7 +1,7 @@
 from django.db import models
-from datetime import date, datetime, time, timezone
-import time
-from django.db.models.fields import TimeField
+from datetime import date, datetime, time, timedelta, timezone
+from django.utils.timezone import utc
+import datetime
 
 
 class Park(models.Model):
@@ -20,5 +20,10 @@ class Park(models.Model):
     harga=models.PositiveBigIntegerField(blank=False, null=False)
 
     # def waktu(self):
-    #     if self.dtg + datetime.time(0,0,5,0):
+    #     if self.dtg + (self.dtg + datetime.timedelta(time(0,0,2,0))):
     #         return self.harga + 500
+    # def waktu(self):
+    #     if self.dtg:
+    #         now = datetime.datetime.utcnow().replace(tzinfo=utc)
+    #         timediff = now - self.dtg
+    #         return timediff.total_seconds()
