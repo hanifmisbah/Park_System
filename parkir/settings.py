@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-CRISPY_TEMPLATES_PACK = 'bootstrap4'
+CRISPY_TEMPLATES_PACK = 'bootstrap4', 'bootstrap5'
 WSGI_APPLICATION = 'parkir.wsgi.application'
 
 
@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'park',
         'USER': 'postgres',
-        'PASSWORD': 'bismillah',
+        'PASSWORD': 'marissa',
         'HOST': 'localhost',
         'PORT': '',
     }
