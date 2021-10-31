@@ -1,3 +1,4 @@
+from django import forms
 from django.forms import ModelForm
 from . import models
 
@@ -11,6 +12,7 @@ class Park(ModelForm):
         self.fields['nopol'].widget.attrs['class'] = 'form-control'
         self.fields['noblok'].widget.attrs['class'] = 'form-control'
         self.fields['harga'].widget.attrs['class'] = 'form-control'
+
 
 # class Harga(ModelForm):
 #     class Meta:
