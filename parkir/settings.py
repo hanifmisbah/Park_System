@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tiket',
     'crispy_forms',
+    'widget_tweaks',
+    'tiket',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            # BASE_DIR + '/templates',
+            # BASE_DIR += '/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'park',
         'USER': 'postgres',
-        'PASSWORD': 'marissa',
+        'PASSWORD': 'hanifmisbah',
         'HOST': 'localhost',
         'PORT': '',
     }

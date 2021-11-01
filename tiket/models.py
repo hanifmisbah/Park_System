@@ -5,8 +5,11 @@ from django.db.models.fields import TimeField
 # from time import time
 
 # Create your models here.
-# class Harga(models.Model):
-#     harga=models.IntegerField(blank=False)
+class Blok(models.Model):
+    noblok=models.CharField(max_length=3)
+
+    def __str__(self):
+        return self.noblok
 
 class Park(models.Model):
     nopol=models.CharField(default='', max_length=10)
@@ -18,19 +21,15 @@ class Park(models.Model):
         ( 'B2', 'B2'),
         ( 'B3', 'B3'),
     ]
-    noblok=models.CharField(max_length=3, choices=NOBLOK, default='' )
-    dtg=models.TimeField(auto_now=True)
+    noblok=models.CharField(max_length=3, choices=NOBLOK, default=NOBLOK)
+    # noblok=models.ForeignKey(Blok, on_delete=models.CASCADE, related_name='blok')
+    dtg=models.TimeField(default=datetime.now)
     # klr=models.DateTimeField(auto_now=True, null=True, blank=True)
     harga=models.PositiveBigIntegerField(blank=False, null=False)
-    # harga=models.ForeignKey(Harga, default='', blank=True, on_delete=models.CASCADE, related_name='biaya')
 
-    # def biaya(self):
-    #     if self.dtg + timedelta(hours=0, minutes=0, seconds=20):
-    #         return self.harga + 500
+    def __str__(self):
+        return self.nopol, self.noblok, self.dtg
 
-    # def biaya(self):
-    #     x = self.dtg
-    #     y = datetime.time(00,00,5)
-        
-    #     waktu = datetime.timedelta(hours=(y.hour - x.hour), minutes=(y.minute - x.minute), seconds=(y.second - x.second))
-    #     print (waktu)
+    def biaya(self):
+        return self.harga
+
