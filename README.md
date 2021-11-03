@@ -27,3 +27,4 @@ nopol kendaraan pada sistem. Pengguna kendaraan mendapat karcis dengan isi: nopo
 tanggal. Saat keluar, pengguna kendaraan menuju portal keluar melewati portal keluar dan memberikan karcis 
 masuk kepada petugas, dan akan mendapatkan karcis kedua dengan isi: nopol, no tempat, waktu masuk, waktu keluar, 
 biaya, tanggal.
+ system ini nantinya akan beroperasi pada sektor per cafe an
